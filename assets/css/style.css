@@ -11,12 +11,12 @@ body {
 
 header {
   text-align: center;
-  padding: 15px 0px 15px 0px;
+  padding: 15px 0px 0px 0px;
 }
 
 #title-row {
-  margin-top: 42px;
-  margin-bottom: 21px;
+  margin-top: 32px;
+  margin-bottom: 11px;
   text-align: center;
 }
 
