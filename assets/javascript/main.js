@@ -1,5 +1,5 @@
 let doorImage1 = document.getElementById("door1");
-const dudDoorPath = "https://content.codecademy.com/projects/chore-door/images/robot.svg";
+const dudDoorPath = "assets/images/wrong-door.png";
 
 const door1Click = () => {
   doorImage1.src = dudDoorPath;
