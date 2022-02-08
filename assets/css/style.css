@@ -4,6 +4,6 @@ body {
   margin: 0px;
 }
 
-#door1 {
+.door {
   cursor: pointer;
 }
