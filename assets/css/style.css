@@ -14,13 +14,13 @@ header {
   padding: 15px 0px 15px 0px;
 }
 
-.title-row {
+#title-row {
   margin-top: 42px;
   margin-bottom: 21px;
   text-align: center;
 }
 
-.instructions-title {
+#instructions-title {
   display: inline;
   padding-left: 10px;
   padding-right: 10px;
