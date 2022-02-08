@@ -17,3 +17,5 @@ const door3Click = () => {
 };
 
 doorImg1.onclick = door1Click;
+doorImg2.onclick = door2Click;
+doorImg3.onclick = door3Click;
