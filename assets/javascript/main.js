@@ -9,7 +9,11 @@ const door1Click = () => {
 };
 
 const door2Click = () => {
-  doorImg1.src = dudDoorPath;
+  doorImg2.src = qDoorPath;
+};
+
+const door3Click = () => {
+  doorImg3.src = qDoorPath;
 };
 
 doorImg1.onclick = door1Click;
