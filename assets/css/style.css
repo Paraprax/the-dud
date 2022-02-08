@@ -27,3 +27,8 @@ header {
   font-family: "Courier New", Courier, monospace;
   font-size: 24px;
 }
+
+.instructions-row {
+  margin: 0 auto;
+  width: 400px;
+}
