@@ -16,8 +16,8 @@ header {
 }
 
 #title-row {
-  margin-top: 32px;
-  margin-bottom: 11px;
+  margin-top: 18px;
+  margin-bottom: 0px;
   text-align: center;
 }
 
@@ -63,14 +63,15 @@ header {
 .start-row {
   margin: auto;
   width: 120px;
-  height: 43px;
+  height: 26px;
   font-family: "Courier New", Courier, monospace;
   background-color: greenyellow;
   border-radius: 5px;
-  padding-top: 22px;
+  padding-top: 5px;
   font-size: 18px;
   text-align: center;
   color: #000000;
-  margin-bottom: 21px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
