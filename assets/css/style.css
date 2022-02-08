@@ -59,3 +59,18 @@ header {
 #door-row {
   text-align: center;
 }
+
+.start-row {
+  margin: auto;
+  width: 120px;
+  height: 43px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: greenyellow;
+  border-radius: 5px;
+  padding-top: 22px;
+  font-size: 18px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 21px;
+  cursor: pointer;
+}
