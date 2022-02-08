@@ -21,6 +21,7 @@ header {
 }
 
 #instructions-table {
+  margin: 0 auto;
 }
 
 #instructions-title {
@@ -29,6 +30,7 @@ header {
   padding-right: 10px;
   font-family: "Courier New", Courier, monospace;
   font-size: 24px;
+  font-weight: bold;
 }
 
 .instructions-row {
