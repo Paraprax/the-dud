@@ -20,6 +20,9 @@ header {
   text-align: center;
 }
 
+#instructions-table {
+}
+
 #instructions-title {
   display: inline;
   padding-left: 10px;
@@ -47,4 +50,8 @@ header {
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   color: greenyellow;
+}
+
+#door-row {
+  text-align: center;
 }
