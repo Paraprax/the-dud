@@ -31,12 +31,12 @@ const doorRandomizer = () => {
 };
 
 const isDud = (door) => {
-  if (door.src = ) {
-    
+  if (door.src == dudDoorPath) {
+    return true;
   } else {
-
+    return false;
   }
-}
+};
 
 const isOpen = (door) => {
   //if the door's src image is currently the closed door:
@@ -72,10 +72,12 @@ const door3Click = () => {
     doorCounter();
   }
 };
-const doorCounter = () => {
+const doorCounter = (door) => {
   numOfClosedDoors -= 1;
   if (numOfClosedDoors === 1) {
     endGame("win");
+  } else if (isDud(door) == true) {
+    endGame();
   }
 };
 
