@@ -5,6 +5,7 @@ let openDoor1;
 let openDoor2;
 let openDoor3;
 let numOfClosedDoors = 3;
+let activeRound = true;
 const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
 const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
 const qDoorPath = "assets/images/right-door.png";
@@ -75,8 +76,10 @@ const door3Click = () => {
 const doorCounter = (door) => {
   numOfClosedDoors -= 1;
   if (numOfClosedDoors === 1 && isDud(door) == false) {
+    activeRound = false;
     endGame("win");
   } else if (isDud(door) == true) {
+    activeRound = false;
     endGame();
   }
 };
