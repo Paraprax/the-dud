@@ -74,7 +74,7 @@ const door3Click = () => {
 };
 const doorCounter = (door) => {
   numOfClosedDoors -= 1;
-  if (numOfClosedDoors === 1) {
+  if (numOfClosedDoors === 1 && isDud(door) == false) {
     endGame("win");
   } else if (isDud(door) == true) {
     endGame();
@@ -89,7 +89,7 @@ doorImg3.onclick = door3Click;
 //outcome:
 const endGame = (gameStatus) => {
   if (gameStatus == "win") {
-    playButton.innerHTML = "Play again?";
+    playButton.innerHTML = "Next round";
   } else {
     playButton.innerHTML = "Game over!";
   }
