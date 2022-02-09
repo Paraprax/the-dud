@@ -5,6 +5,7 @@ let openDoor1;
 let openDoor2;
 let openDoor3;
 let numOfClosedDoors = 3;
+let closedDoorPath = "assets/images/door.png";
 const dudDoorPath = "assets/images/wrong-door.png";
 const qDoorPath = "assets/images/right-door.png";
 
@@ -20,6 +21,8 @@ const door3Click = () => {
   doorImg3.src = openDoor3;
   doorCounter();
 };
+
+const isOpen = (door) => {};
 
 const doorRandomizer = () => {
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
