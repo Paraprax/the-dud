@@ -9,13 +9,13 @@ const dudDoorPath = "assets/images/wrong-door.png";
 const qDoorPath = "assets/images/right-door.png";
 
 const door1Click = () => {
-  doorImg1.src = dudDoorPath;
+  doorImg1.src = openDoor1;
 };
 const door2Click = () => {
-  doorImg2.src = qDoorPath;
+  doorImg2.src = openDoor2;
 };
 const door3Click = () => {
-  doorImg3.src = qDoorPath;
+  doorImg3.src = openDoor3;
 };
 
 const doorRandomizer = () => {
