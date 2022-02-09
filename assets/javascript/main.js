@@ -112,4 +112,4 @@ const endGame = (gameStatus) => {
   }
 };
 
-doorRandomizer();
+startRound();
