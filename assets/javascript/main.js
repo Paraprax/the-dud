@@ -22,7 +22,14 @@ const door3Click = () => {
   doorCounter();
 };
 
-const isOpen = (door) => {};
+const isOpen = (door) => {
+  //if the door's src image is currently the closed door:
+  if (door.src == closedDoorPath) {
+    return false;
+  } else { //if it's any other image:
+    return true;
+  }
+};
 
 const doorRandomizer = () => {
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
