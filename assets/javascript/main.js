@@ -5,40 +5,9 @@ let openDoor1;
 let openDoor2;
 let openDoor3;
 let numOfClosedDoors = 3;
-const closedDoorPath = "assets/images/door.png";
+const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
 const dudDoorPath = "assets/images/wrong-door.png";
 const qDoorPath = "assets/images/right-door.png";
-
-const isOpen = (door) => {
-  //if the door's src image is currently the closed door:
-  if (door.src == closedDoorPath) {
-    return false;
-  } else {
-    //if it's any other image:
-    return true;
-  }
-};
-
-const door1Click = () => {
-  if (!isOpen(doorImg1)) {
-    doorImg1.src = openDoor1;
-    doorCounter();
-  }
-};
-const door2Click = () => {
-  if (!isOpen(doorImg2)) {
-    doorImg2.src = openDoor2;
-    doorCounter();
-  }
-};
-const door3Click = () => {
-  if (!isOpen(doorImg3)) {
-    doorImg3.src = openDoor3;
-    doorCounter();
-  }
-};
-
-const endGame = () => {};
 
 const doorRandomizer = () => {
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
@@ -57,8 +26,43 @@ const doorRandomizer = () => {
     openDoor1 = qDoorPath;
     openDoor2 = qDoorPath;
   }
+  console.log("doorRandomizer called");
 };
 
+const isOpen = (door) => {
+  //if the door's src image is currently the closed door:
+  if (door.src == closedDoorPath) {
+    console.log(door.src);
+    console.log("isOpen returned false");
+    return false;
+  } else {
+    //if it's any other image:
+    console.log(door.src);
+    console.log("isOpen returned true");
+    return true;
+  }
+};
+
+const door1Click = () => {
+  if (!isOpen(doorImg1)) {
+    doorImg1.src = openDoor1;
+    doorCounter();
+  }
+};
+
+const door2Click = () => {
+  if (!isOpen(doorImg2)) {
+    doorImg2.src = openDoor2;
+    doorCounter();
+  }
+};
+
+const door3Click = () => {
+  if (!isOpen(doorImg3)) {
+    doorImg3.src = openDoor3;
+    doorCounter();
+  }
+};
 const doorCounter = () => {
   numOfClosedDoors -= 1;
   if (numOfClosedDoors == 1) {
@@ -70,5 +74,8 @@ const doorCounter = () => {
 doorImg1.onclick = door1Click;
 doorImg2.onclick = door2Click;
 doorImg3.onclick = door3Click;
+
+//outcome:
+const endGame = () => {};
 
 doorRandomizer();
