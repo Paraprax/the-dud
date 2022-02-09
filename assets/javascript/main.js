@@ -1,6 +1,9 @@
 let doorImg1 = document.getElementById("door1");
 let doorImg2 = document.getElementById("door2");
 let doorImg3 = document.getElementById("door3");
+let openDoor1;
+let openDoor2;
+let openDoor3;
 let numOfClosedDoors = 3;
 const dudDoorPath = "assets/images/wrong-door.png";
 const qDoorPath = "assets/images/right-door.png";
@@ -16,10 +19,13 @@ const door3Click = () => {
 };
 
 const doorRandomizer = () => {
-  let wrongDoor = Math.floor(Math.random() * numOfClosedDoors);
+  let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
+  console.log(wrongDoor);
 };
 
 //click events:
 doorImg1.onclick = door1Click;
 doorImg2.onclick = door2Click;
 doorImg3.onclick = door3Click;
+
+doorRandomizer();
