@@ -6,7 +6,7 @@ let openDoor2;
 let openDoor3;
 let numOfClosedDoors = 3;
 const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
-const dudDoorPath = "assets/images/wrong-door.png";
+const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
 const qDoorPath = "assets/images/right-door.png";
 const playButton = document.getElementById("playButton");
 
@@ -29,6 +29,14 @@ const doorRandomizer = () => {
   }
   console.log("doorRandomizer called");
 };
+
+const isDud = (door) => {
+  if (door.src = ) {
+    
+  } else {
+
+  }
+}
 
 const isOpen = (door) => {
   //if the door's src image is currently the closed door:
