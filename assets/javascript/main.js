@@ -85,7 +85,14 @@ const door3Click = () => {
 };
 
 const startRound = () => {
-  
+  playButton.innerHTML = "Choose a door";
+  //reset gameplay values:
+  doorImg1.src = closedDoorPath;
+  doorImg2.src = closedDoorPath;
+  doorImg3.src = closedDoorPath;
+  numOfClosedDoors = 3;
+  activeRound = true;
+  doorRandomizer();
 };
 
 //click pairings:
