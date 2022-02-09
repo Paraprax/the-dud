@@ -54,21 +54,21 @@ const isOpen = (door) => {
 };
 
 const door1Click = () => {
-  if (!isOpen(doorImg1)) {
+  if (!isOpen(doorImg1) && activeRound) {
     doorImg1.src = openDoor1;
     doorCounter(doorImg1);
   }
 };
 
 const door2Click = () => {
-  if (!isOpen(doorImg2)) {
+  if (!isOpen(doorImg2) && activeRound) {
     doorImg2.src = openDoor2;
     doorCounter(doorImg2);
   }
 };
 
 const door3Click = () => {
-  if (!isOpen(doorImg3)) {
+  if (!isOpen(doorImg3) && activeRound) {
     doorImg3.src = openDoor3;
     doorCounter(doorImg3);
   }
