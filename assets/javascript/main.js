@@ -21,6 +21,14 @@ const door3Click = () => {
 const doorRandomizer = () => {
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
   console.log(wrongDoor);
+
+  if (wrongDoor == 1) {
+    openDoor1 = dudDoorPath;
+  } else if (wrongDoor == 2) {
+    openDoor2 = dudDoorPath;
+  } else {
+    openDoor3 = dudDoorPath;
+  }
 };
 
 //click events:
