@@ -1,15 +1,15 @@
-let doorImg1 = document.getElementById("door1");
-let doorImg2 = document.getElementById("door2");
-let doorImg3 = document.getElementById("door3");
+const doorImg1 = document.getElementById("door1");
+const doorImg2 = document.getElementById("door2");
+const doorImg3 = document.getElementById("door3");
+const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
+const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
+const qDoorPath = "assets/images/right-door.png";
+const playButton = document.getElementById("playButton");
 let openDoor1;
 let openDoor2;
 let openDoor3;
 let numOfClosedDoors = 3;
 let activeRound = true;
-const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
-const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
-const qDoorPath = "assets/images/right-door.png";
-const playButton = document.getElementById("playButton");
 
 const doorRandomizer = () => {
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
@@ -53,6 +53,16 @@ const isOpen = (door) => {
   }
 };
 
+const doorCounter = (door) => {
+  numOfClosedDoors -= 1;
+  if (numOfClosedDoors === 1 && isDud(door) == false) {
+    endGame("win");
+  } else if (isDud(door) == true) {
+    endGame();
+  }
+};
+
+//functions called by onClick events:
 const door1Click = () => {
   if (!isOpen(doorImg1) && activeRound) {
     doorImg1.src = openDoor1;
@@ -73,19 +83,16 @@ const door3Click = () => {
     doorCounter(doorImg3);
   }
 };
-const doorCounter = (door) => {
-  numOfClosedDoors -= 1;
-  if (numOfClosedDoors === 1 && isDud(door) == false) {
-    endGame("win");
-  } else if (isDud(door) == true) {
-    endGame();
-  }
+
+const startRound = () => {
+  
 };
 
-//click events:
+//click pairings:
 doorImg1.onclick = door1Click;
 doorImg2.onclick = door2Click;
 doorImg3.onclick = door3Click;
+playButton.onclick = startRound;
 
 //outcome:
 const endGame = (gameStatus) => {
