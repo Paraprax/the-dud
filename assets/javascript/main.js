@@ -1,6 +1,8 @@
 const doorImg1 = document.getElementById("door1");
 const doorImg2 = document.getElementById("door2");
 const doorImg3 = document.getElementById("door3");
+const doorImg4 = document.getElementById("door4");
+const doorImg5 = document.getElementById("door5");
 const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
 const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
 const qDoorPath = "assets/images/right-door.png";
@@ -8,7 +10,9 @@ const playButton = document.getElementById("playButton");
 let openDoor1;
 let openDoor2;
 let openDoor3;
-let numOfClosedDoors = 3;
+let openDoor4;
+let openDoor5;
+let numOfClosedDoors = 5;
 let activeRound = true;
 
 const doorRandomizer = () => {
@@ -19,14 +23,32 @@ const doorRandomizer = () => {
     openDoor1 = dudDoorPath;
     openDoor2 = qDoorPath;
     openDoor3 = qDoorPath;
+    openDoor4 = qDoorPath;
+    openDoor5 = qDoorPath;
   } else if (wrongDoor == 2) {
     openDoor2 = dudDoorPath;
     openDoor1 = qDoorPath;
     openDoor3 = qDoorPath;
-  } else {
+    openDoor4 = qDoorPath;
+    openDoor5 = qDoorPath;
+  } else if (wrongDoor == 3) {
     openDoor3 = dudDoorPath;
     openDoor1 = qDoorPath;
     openDoor2 = qDoorPath;
+    openDoor4 = qDoorPath;
+    openDoor5 = qDoorPath;
+  } else if (wrongDoor == 4) {
+    openDoor4 = dudDoorPath;
+    openDoor1 = qDoorPath;
+    openDoor2 = qDoorPath;
+    openDoor3 = qDoorPath;
+    openDoor5 = qDoorPath;
+  } else {
+    openDoor5 = dudDoorPath;
+    openDoor1 = qDoorPath;
+    openDoor2 = qDoorPath;
+    openDoor3 = qDoorPath;
+    openDoor4 = qDoorPath;
   }
   console.log("doorRandomizer called");
 };
