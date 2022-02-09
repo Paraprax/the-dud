@@ -91,6 +91,7 @@ const endGame = (gameStatus) => {
   if (gameStatus == "win") {
     playButton.innerHTML = "Play again?";
   } else {
+    playButton.innerHTML = "Game over!";
   }
 };
 
