@@ -37,6 +37,13 @@ const doorRandomizer = () => {
   }
 };
 
+const doorCounter = () => {
+  numOfClosedDoors -= 1;
+  if (numOfClosedDoors == 1) {
+    endGame();
+  }
+}
+
 //click events:
 doorImg1.onclick = door1Click;
 doorImg2.onclick = door2Click;
