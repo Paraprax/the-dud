@@ -12,7 +12,7 @@ let openDoor2;
 let openDoor3;
 let openDoor4;
 let openDoor5;
-let numOfClosedDoors;
+let numOfClosedDoors = 5;
 let activeRound = true;
 
 const doorRandomizer = () => {
