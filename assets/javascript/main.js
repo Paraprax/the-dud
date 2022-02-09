@@ -95,20 +95,26 @@ const startRound = () => {
   doorRandomizer();
 };
 
+//outcome:
+const endGame = (gameStatus) => {
+  if (gameStatus == "win") {
+    activeRound = false;
+    console.log("activeRound is now false");
+    playButton.innerHTML = "Next round";
+  } else {
+    activeRound = false;
+    console.log("activeRound is now false");
+    playButton.innerHTML = "Game over!";
+  }
+};
+
 //click pairings:
 doorImg1.onclick = door1Click;
 doorImg2.onclick = door2Click;
 doorImg3.onclick = door3Click;
-playButton.onclick = startRound;
-
-//outcome:
-const endGame = (gameStatus) => {
-  if (gameStatus == "win") {
-    playButton.innerHTML = "Next round";
-    activeRound = false;
-  } else {
-    playButton.innerHTML = "Game over!";
-    activeRound = false;
+playButton.onclick = () => {
+  if (!activeRound) {
+    startRound();
   }
 };
 
