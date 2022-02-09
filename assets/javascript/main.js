@@ -24,10 +24,16 @@ const doorRandomizer = () => {
 
   if (wrongDoor == 1) {
     openDoor1 = dudDoorPath;
+    openDoor2 = qDoorPath;
+    openDoor3 = qDoorPath;
   } else if (wrongDoor == 2) {
     openDoor2 = dudDoorPath;
+    openDoor1 = qDoorPath;
+    openDoor3 = qDoorPath;
   } else {
     openDoor3 = dudDoorPath;
+    openDoor1 = qDoorPath;
+    openDoor2 = qDoorPath;
   }
 };
 
