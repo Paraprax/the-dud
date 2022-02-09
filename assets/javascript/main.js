@@ -12,10 +12,11 @@ let openDoor2;
 let openDoor3;
 let openDoor4;
 let openDoor5;
-let numOfClosedDoors = 5;
+let numOfClosedDoors;
 let activeRound = true;
 
 const doorRandomizer = () => {
+  console.log(numOfClosedDoors);
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
   console.log(wrongDoor);
 
@@ -84,27 +85,38 @@ const doorCounter = (door) => {
   }
 };
 
-//functions called by onClick events:
+//functions called by onClick events: --------------
 const door1Click = () => {
   if (!isOpen(doorImg1) && activeRound) {
     doorImg1.src = openDoor1;
     doorCounter(doorImg1);
   }
 };
-
 const door2Click = () => {
   if (!isOpen(doorImg2) && activeRound) {
     doorImg2.src = openDoor2;
     doorCounter(doorImg2);
   }
 };
-
 const door3Click = () => {
   if (!isOpen(doorImg3) && activeRound) {
     doorImg3.src = openDoor3;
     doorCounter(doorImg3);
   }
 };
+const door4Click = () => {
+  if (!isOpen(doorImg4) && activeRound) {
+    doorImg4.src = openDoor4;
+    doorCounter(doorImg4);
+  }
+};
+const door5Click = () => {
+  if (!isOpen(doorImg5) && activeRound) {
+    doorImg5.src = openDoor5;
+    doorCounter(doorImg5);
+  }
+};
+// --------------
 
 const startRound = () => {
   playButton.innerHTML = "Choose a door";
@@ -112,7 +124,7 @@ const startRound = () => {
   doorImg1.src = closedDoorPath;
   doorImg2.src = closedDoorPath;
   doorImg3.src = closedDoorPath;
-  numOfClosedDoors = 3;
+  numOfClosedDoors = 5;
   activeRound = true;
   doorRandomizer();
 };
@@ -134,6 +146,8 @@ const endGame = (gameStatus) => {
 doorImg1.onclick = door1Click;
 doorImg2.onclick = door2Click;
 doorImg3.onclick = door3Click;
+doorImg4.onclick = door4Click;
+doorImg5.onclick = door5Click;
 playButton.onclick = () => {
   if (!activeRound) {
     startRound();
