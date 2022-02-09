@@ -5,28 +5,9 @@ let openDoor1;
 let openDoor2;
 let openDoor3;
 let numOfClosedDoors = 3;
-let closedDoorPath = "assets/images/door.png";
+const closedDoorPath = "assets/images/door.png";
 const dudDoorPath = "assets/images/wrong-door.png";
 const qDoorPath = "assets/images/right-door.png";
-
-const door1Click = () => {
-  if (!isOpen) {
-    doorImg1.src = openDoor1;
-    doorCounter();
-  }
-};
-const door2Click = () => {
-  if (!isOpen) {
-    doorImg2.src = openDoor2;
-    doorCounter();
-  }
-};
-const door3Click = () => {
-  if (!isOpen) {
-    doorImg3.src = openDoor3;
-    doorCounter();
-  }
-};
 
 const isOpen = (door) => {
   //if the door's src image is currently the closed door:
@@ -37,6 +18,27 @@ const isOpen = (door) => {
     return true;
   }
 };
+
+const door1Click = () => {
+  if (!isOpen(doorImg1)) {
+    doorImg1.src = openDoor1;
+    doorCounter();
+  }
+};
+const door2Click = () => {
+  if (!isOpen(doorImg2)) {
+    doorImg2.src = openDoor2;
+    doorCounter();
+  }
+};
+const door3Click = () => {
+  if (!isOpen(doorImg3)) {
+    doorImg3.src = openDoor3;
+    doorCounter();
+  }
+};
+
+const endGame = () => {};
 
 const doorRandomizer = () => {
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
