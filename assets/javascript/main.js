@@ -5,7 +5,7 @@ const doorImg4 = document.getElementById("door4");
 const doorImg5 = document.getElementById("door5");
 const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
 const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
-const qDoorPath = "assets/images/right-door.png";
+const qDoorPath = "https://i.imgur.com/mJGVU5p.png";
 const playButton = document.getElementById("playButton");
 let openDoor1;
 let openDoor2;
@@ -124,6 +124,8 @@ const startRound = () => {
   doorImg1.src = closedDoorPath;
   doorImg2.src = closedDoorPath;
   doorImg3.src = closedDoorPath;
+  doorImg4.src = closedDoorPath;
+  doorImg5.src = closedDoorPath;
   numOfClosedDoors = 5;
   activeRound = true;
   doorRandomizer();
