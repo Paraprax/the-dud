@@ -64,12 +64,12 @@ header {
 .playButton-row {
   margin: auto;
   width: 120px;
-  height: 26px;
+  height: 38px;
+  line-height: 38px;
   font-family: "Courier New", Courier, monospace;
   background-color: greenyellow;
   border-radius: 5px;
-  padding-top: 5px;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   color: #000000;
   margin-top: 10px;

@@ -79,7 +79,7 @@ doorImg3.onclick = door3Click;
 //outcome:
 const endGame = (gameStatus) => {
   if (gameStatus == "win") {
-    playButton.innerHTML = "Well done! Play again?";
+    playButton.innerHTML = "Play again?";
   } else {
   }
 };
