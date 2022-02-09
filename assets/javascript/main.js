@@ -8,6 +8,7 @@ let numOfClosedDoors = 3;
 const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
 const dudDoorPath = "assets/images/wrong-door.png";
 const qDoorPath = "assets/images/right-door.png";
+const playButton = document.getElementById("playButton");
 
 const doorRandomizer = () => {
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
@@ -65,8 +66,8 @@ const door3Click = () => {
 };
 const doorCounter = () => {
   numOfClosedDoors -= 1;
-  if (numOfClosedDoors == 1) {
-    endGame();
+  if (numOfClosedDoors === 1) {
+    endGame("win");
   }
 };
 
@@ -76,6 +77,11 @@ doorImg2.onclick = door2Click;
 doorImg3.onclick = door3Click;
 
 //outcome:
-const endGame = () => {};
+const endGame = (gameStatus) => {
+  if (gameStatus == "win") {
+    playButton.innerHTML = "Well done! Play again?";
+  } else {
+  }
+};
 
 doorRandomizer();
