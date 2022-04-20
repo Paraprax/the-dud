@@ -121,7 +121,7 @@ const door5Click = () => {
 
 const startRound = () => {
   playButton.innerHTML = "";
-  statusMessage.innerHTML = "Game";
+  statusMessage.innerHTML = "Choose A Door";
   //reset gameplay values:
   doorImg1.src = closedDoorPath;
   doorImg2.src = closedDoorPath;
