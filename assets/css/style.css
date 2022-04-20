@@ -11,20 +11,21 @@ body {
   padding: 10px;
 }
 
-.status-box {
-  background-color: green;
+.tv2 {
   padding: 10px;
   margin: 40px;
   position: absolute;
   right: 100px;
-}
-
-.tv2 {
   width: 100px;
   z-index: 1;
 }
 
 .status-message {
+  background-color: green;
+  padding: 10px;
+  margin: 40px;
+  position: absolute;
+  right: 100px;
   z-index: -1;
 }
 
