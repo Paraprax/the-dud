@@ -119,7 +119,7 @@ const door5Click = () => {
 // --------------
 
 const startRound = () => {
-  playButton.innerHTML = "Choose a door";
+  playButton.innerHTML = "";
   //reset gameplay values:
   doorImg1.src = closedDoorPath;
   doorImg2.src = closedDoorPath;
