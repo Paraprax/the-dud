@@ -7,6 +7,7 @@ const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
 const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
 const qDoorPath = "https://i.imgur.com/mJGVU5p.png";
 const playButton = document.getElementById("playButton");
+const statusMessage = document.getElementById("status-message");
 let openDoor1;
 let openDoor2;
 let openDoor3;
@@ -120,6 +121,7 @@ const door5Click = () => {
 
 const startRound = () => {
   playButton.innerHTML = "";
+  statusMessage.innerHTML = "Game";
   //reset gameplay values:
   doorImg1.src = closedDoorPath;
   doorImg2.src = closedDoorPath;
