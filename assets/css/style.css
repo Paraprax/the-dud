@@ -11,6 +11,18 @@ body {
   padding: 10px;
 }
 
+.status-box {
+  background-color: green;
+  padding: 60px;
+  margin: 40px;
+  position: absolute;
+  float: right;
+}
+
+.tv {
+  width: 10px;
+}
+
 header {
   text-align: center;
   padding: 10px;
