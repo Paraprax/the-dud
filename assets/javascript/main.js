@@ -142,7 +142,8 @@ const endGame = (gameStatus) => {
   } else {
     activeRound = false;
     console.log("activeRound is now false");
-    playButton.innerHTML = "Game over!";
+    playButton.innerHTML = "New Game";
+    statusMessage.innerHTML = "GAME OVER";
   }
 };
 
