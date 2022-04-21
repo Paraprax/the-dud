@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "TickingTimebombBB";
+  src: url("../fonts/TickingTimebombBB.ttf");
+}
+
 body {
   background-color: #101010;
   background-image: url("../images/corrugated-metal-background-1.jpg");
