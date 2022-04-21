@@ -3,7 +3,7 @@ const doorImg2 = document.getElementById("door2");
 const doorImg3 = document.getElementById("door3");
 const doorImg4 = document.getElementById("door4");
 const doorImg5 = document.getElementById("door5");
-const barredDoorPath = "https://i.imgur.com/LIa4bkY.png";
+const barredDoorPath = "https://i.imgur.com/uWynumy.png";
 const closedDoorPath = "https://i.imgur.com/niZAX8c.png";
 const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
 const qDoorPath = "https://i.imgur.com/mJGVU5p.png";
@@ -124,7 +124,7 @@ const door5Click = () => {
 // --------------
 
 const startRound = () => {
-  playButton.innerHTML = "";
+  playButton.innerHTML = "Start Game";
   statusMessage.innerHTML = "Choose A Door";
   streakMessage.innerHTML = "Winning Streak: ";
   streakCount.innerHTML = countNumber;
@@ -132,11 +132,11 @@ const startRound = () => {
   statusMessage.style.color = "rgb(102, 255, 47)";
   document.getElementById("tv-2-background").style.backgroundColor = "rgb(0, 6, 2)";
   //reset gameplay values:
-  doorImg1.src = closedDoorPath;
-  doorImg2.src = closedDoorPath;
-  doorImg3.src = closedDoorPath;
-  doorImg4.src = closedDoorPath;
-  doorImg5.src = closedDoorPath;
+  doorImg1.src = barredDoorPath;
+  doorImg2.src = barredDoorPath;
+  doorImg3.src = barredDoorPath;
+  doorImg4.src = barredDoorPath;
+  doorImg5.src = barredDoorPath;
   numOfClosedDoors = 5;
   activeRound = true;
   doorRandomizer();
@@ -168,7 +168,13 @@ doorImg3.onclick = door3Click;
 doorImg4.onclick = door4Click;
 doorImg5.onclick = door5Click;
 playButton.onclick = () => {
+  doorImg1.src = closedDoorPath;
+  doorImg2.src = closedDoorPath;
+  doorImg3.src = closedDoorPath;
+  doorImg4.src = closedDoorPath;
+  doorImg5.src = closedDoorPath;
   if (!activeRound) {
+    console.log(`button clicked`);
     streakCount.innerHTML = countNumber;
     startRound();
   }
