@@ -66,7 +66,7 @@ header {
   z-index: 2;
 }
 
-#streak-count {
+#streak-message {
   font-family: "TickingTimebombBB";
   font-size: 20pt;
   padding: 10px;
@@ -79,6 +79,21 @@ header {
   z-index: 1;
   -ms-transform: rotate(8deg); /* IE 9 */
   transform: rotate(8deg);
+}
+
+#streak-count {
+  font-family: "TickingTimebombBB";
+  font-size: 20pt;
+  padding: 10px;
+  margin: 40px;
+  width: 70px;
+  position: absolute;
+  text-align: center;
+  top: 157px;
+  left: 130px;
+  z-index: 1;
+  -ms-transform: rotate(8deg); /* IE 9 */
+  transform: rotate(10deg);
 }
 
 #tv-1-background {
