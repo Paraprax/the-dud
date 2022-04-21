@@ -10,6 +10,7 @@ const playButton = document.getElementById("playButton");
 const statusMessage = document.getElementById("status-message");
 const streakMessage = document.getElementById("streak-message");
 const streakCount = document.getElementById("streak-count");
+let countNumber = 0;
 let openDoor1;
 let openDoor2;
 let openDoor3;
@@ -125,6 +126,7 @@ const startRound = () => {
   playButton.innerHTML = "";
   statusMessage.innerHTML = "Choose A Door";
   streakMessage.innerHTML = "Winning Streak: ";
+  streakCount.innerHTML = countNumber;
   //reset gameplay values:
   doorImg1.src = closedDoorPath;
   doorImg2.src = closedDoorPath;
@@ -141,6 +143,8 @@ const endGame = (gameStatus) => {
   if (gameStatus == "win") {
     activeRound = false;
     console.log("activeRound is now false");
+    countNumber += 1;
+    streakCount.innerHTML = countNumber;
     playButton.innerHTML = "Next round";
   } else {
     activeRound = false;
