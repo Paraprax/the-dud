@@ -152,6 +152,8 @@ const endGame = (gameStatus) => {
     // console.log("activeRound is now false");
     playButton.innerHTML = "New Game";
     statusMessage.innerHTML = "GAME OVER";
+    statusMessage.style.color = "rgb(255, 204, 0)";
+    document.getElementById("tv-2-background").style.backgroundColor = "red";
   }
 };
 
