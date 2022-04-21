@@ -22,7 +22,7 @@ let activeRound = true;
 const doorRandomizer = () => {
   // console.log(numOfClosedDoors);
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
-  // console.log(wrongDoor);
+  console.log(wrongDoor);
 
   if (wrongDoor == 1) {
     openDoor1 = dudDoorPath;
@@ -149,7 +149,6 @@ const endGame = (gameStatus) => {
   } else {
     activeRound = false;
     countNumber = 0;
-    streakCount.innerHTML = countNumber;
     // console.log("activeRound is now false");
     playButton.innerHTML = "New Game";
     statusMessage.innerHTML = "GAME OVER";
@@ -164,6 +163,7 @@ doorImg4.onclick = door4Click;
 doorImg5.onclick = door5Click;
 playButton.onclick = () => {
   if (!activeRound) {
+    streakCount.innerHTML = countNumber;
     startRound();
   }
 };
