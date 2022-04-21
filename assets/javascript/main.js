@@ -127,6 +127,9 @@ const startRound = () => {
   statusMessage.innerHTML = "Choose A Door";
   streakMessage.innerHTML = "Winning Streak: ";
   streakCount.innerHTML = countNumber;
+  //reset TV colours:
+  statusMessage.style.color = "rgb(102, 255, 47)";
+  document.getElementById("tv-2-background").style.backgroundColor = "rgb(0, 6, 2)";
   //reset gameplay values:
   doorImg1.src = closedDoorPath;
   doorImg2.src = closedDoorPath;
