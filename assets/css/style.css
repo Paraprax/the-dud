@@ -137,6 +137,7 @@ header {
   height: 38px;
   line-height: 38px;
   font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
   background-color: greenyellow;
   border-radius: 5px;
   font-size: 16px;
