@@ -74,11 +74,11 @@ header {
   width: 70px;
   position: absolute;
   text-align: center;
-  top: 110px;
+  top: 100px;
   left: 130px;
   z-index: 1;
-  -ms-transform: rotate(351deg); /* IE 9 */
-  transform: rotate(351deg);
+  -ms-transform: rotate(8deg); /* IE 9 */
+  transform: rotate(8deg);
 }
 
 #tv-1-background {

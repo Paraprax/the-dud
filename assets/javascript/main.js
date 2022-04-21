@@ -8,6 +8,7 @@ const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
 const qDoorPath = "https://i.imgur.com/mJGVU5p.png";
 const playButton = document.getElementById("playButton");
 const statusMessage = document.getElementById("status-message");
+const streakCounter = document.getElementById("streak-count");
 let openDoor1;
 let openDoor2;
 let openDoor3;
@@ -122,6 +123,7 @@ const door5Click = () => {
 const startRound = () => {
   playButton.innerHTML = "";
   statusMessage.innerHTML = "Choose A Door";
+  streakCounter.innerHTML = "Winning Streak: 0";
   //reset gameplay values:
   doorImg1.src = closedDoorPath;
   doorImg2.src = closedDoorPath;
