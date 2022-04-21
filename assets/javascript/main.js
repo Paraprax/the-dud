@@ -20,9 +20,9 @@ let numOfClosedDoors = 5;
 let activeRound = true;
 
 const doorRandomizer = () => {
-  console.log(numOfClosedDoors);
+  // console.log(numOfClosedDoors);
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
-  console.log(wrongDoor);
+  // console.log(wrongDoor);
 
   if (wrongDoor == 1) {
     openDoor1 = dudDoorPath;
@@ -55,7 +55,7 @@ const doorRandomizer = () => {
     openDoor3 = qDoorPath;
     openDoor4 = qDoorPath;
   }
-  console.log("doorRandomizer called");
+  // console.log("doorRandomizer called");
 };
 
 const isDud = (door) => {
@@ -70,12 +70,12 @@ const isOpen = (door) => {
   //if the door's src image is currently the closed door:
   if (door.src == closedDoorPath) {
     console.log(door.src);
-    console.log("isOpen returned false");
+    // console.log("isOpen returned false");
     return false;
   } else {
     //if it's any other image:
     console.log(door.src);
-    console.log("isOpen returned true");
+    // console.log("isOpen returned true");
     return true;
   }
 };
@@ -142,7 +142,7 @@ const startRound = () => {
 const endGame = (gameStatus) => {
   if (gameStatus == "win") {
     activeRound = false;
-    console.log("activeRound is now false");
+    // console.log("activeRound is now false");
     countNumber += 1;
     streakCount.innerHTML = countNumber;
     playButton.innerHTML = "Next round";
@@ -150,7 +150,7 @@ const endGame = (gameStatus) => {
     activeRound = false;
     countNumber = 0;
     streakCount.innerHTML = countNumber;
-    console.log("activeRound is now false");
+    // console.log("activeRound is now false");
     playButton.innerHTML = "New Game";
     statusMessage.innerHTML = "GAME OVER";
   }
