@@ -9,6 +9,7 @@ const qDoorPath = "https://i.imgur.com/mJGVU5p.png";
 const playButton = document.getElementById("playButton");
 const statusMessage = document.getElementById("status-message");
 const streakMessage = document.getElementById("streak-message");
+const streakCount = document.getElementById("streak-count");
 let openDoor1;
 let openDoor2;
 let openDoor3;
