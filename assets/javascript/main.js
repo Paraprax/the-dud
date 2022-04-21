@@ -148,6 +148,8 @@ const endGame = (gameStatus) => {
     playButton.innerHTML = "Next round";
   } else {
     activeRound = false;
+    countNumber = 0;
+    streakCount.innerHTML = countNumber;
     console.log("activeRound is now false");
     playButton.innerHTML = "New Game";
     statusMessage.innerHTML = "GAME OVER";
