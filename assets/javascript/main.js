@@ -11,6 +11,7 @@ const playButton = document.getElementById("playButton");
 const statusMessage = document.getElementById("status-message");
 const streakMessage = document.getElementById("streak-message");
 const streakCount = document.getElementById("streak-count");
+const blinkingArrow = document.getElementById("arrow");
 let countNumber = 0;
 let openDoor1;
 let openDoor2;
@@ -192,6 +193,11 @@ playButton.onclick = () => {
     doorImg3.src = closedDoorPath;
     doorImg4.src = closedDoorPath;
     doorImg5.src = closedDoorPath;
+    //turn on TV text:
+    statusMessage.style.display = "block";
+    streakMessage.style.display = "block";
+    streakCount.style.display = "block";
+    blinkingArrow.style.display = "block";
   }
   if (!activeRound) {
     playButton.innerHTML = " ";
