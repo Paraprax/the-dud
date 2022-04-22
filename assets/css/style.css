@@ -192,6 +192,6 @@ header {
 /* hide the TVs on small screens */
 @media (max-width: 627px) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
