@@ -8,6 +8,7 @@ const closedDoorPath = "https://i.imgur.com/p3J7taH.png";
 const dudDoorPath = "https://i.imgur.com/ADa7c0z.png";
 const qDoorPath = "https://i.imgur.com/mJGVU5p.png";
 const playButton = document.getElementById("playButton");
+const buttonInnerText = document.getElementById("buttonText");
 const statusMessage = document.getElementById("status-message");
 const streakMessage = document.getElementById("streak-message");
 const streakCount = document.getElementById("streak-count");
@@ -226,15 +227,15 @@ setInterval(() => {
   }
 }, speed);
 
-//blinking button text logic
+//blinking button-text logic
 let buttonText = true;
 var speed = 900;
 setInterval(() => {
   if (buttonText) {
-    document.getElementById("buttonText").style.opacity = 0;
+    buttonInnerText.style.opacity = 0;
     buttonText = false;
   } else {
-    document.getElementById("buttonText").style.opacity = 1;
+    buttonInnerText.style.opacity = 1;
     buttonText = true;
   }
 }, speed);
