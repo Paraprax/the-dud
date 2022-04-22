@@ -132,7 +132,6 @@ const door5Click = () => {
 // --------------
 
 const startRound = () => {
-  playButton.innerHTML = "Start Game";
   statusMessage.innerHTML = "Choose A Door";
   streakMessage.innerHTML = "Winning Streak: ";
   streakCount.innerHTML = countNumber;
@@ -183,6 +182,8 @@ doorImg4.onclick = door4Click;
 doorImg5.onclick = door5Click;
 playButton.onclick = () => {
   if (!gameStarted) {
+    //unbars doors on first round of refresh only
+    playButton.innerHTML = " ";
     gameStarted = true;
     doorImg1.src = closedDoorPath;
     doorImg2.src = closedDoorPath;
