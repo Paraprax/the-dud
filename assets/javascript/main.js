@@ -204,3 +204,16 @@ playButton.onclick = () => {
 };
 
 startRound();
+
+//blinking arrow logic:
+let arrow = true;
+var speed = 250;
+setInterval(() => {
+  if (arrow) {
+    document.getElementById("arrow").style.opacity = 0;
+    arrow = false;
+  } else {
+    document.getElementById("arrow").style.opacity = 1;
+    arrow = true;
+  }
+}, speed);
