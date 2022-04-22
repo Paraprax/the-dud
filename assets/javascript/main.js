@@ -31,7 +31,7 @@ doorImg5.src = barredDoorPath;
 const doorRandomizer = () => {
   // console.log(numOfClosedDoors);
   let wrongDoor = Math.floor(Math.random() * numOfClosedDoors + 1);
-  console.log(wrongDoor);
+  console.log(`For devs or cheaters: ${wrongDoor}`);
 
   if (wrongDoor == 1) {
     openDoor1 = dudDoorPath;
@@ -78,7 +78,6 @@ const isDud = (door) => {
 const isOpen = (door) => {
   //if the door's src image is currently the closed door:
   if (door.src == closedDoorPath) {
-    console.log(door.src);
     // console.log("isOpen returned false");
     return false;
   } else {
