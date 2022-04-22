@@ -64,7 +64,6 @@ const doorRandomizer = () => {
     openDoor3 = qDoorPath;
     openDoor4 = qDoorPath;
   }
-  // console.log("doorRandomizer called");
 };
 
 const isDud = (door) => {
@@ -78,12 +77,9 @@ const isDud = (door) => {
 const isOpen = (door) => {
   //if the door's src image is currently the closed door:
   if (door.src == closedDoorPath) {
-    // console.log("isOpen returned false");
     return false;
   } else {
     //if it's any other image:
-    // console.log(door.src);
-    // console.log("isOpen returned true");
     return true;
   }
 };
@@ -158,7 +154,6 @@ const resetDoors = () => {
 const endGame = (gameStatus) => {
   if (gameStatus == "win") {
     activeRound = false;
-    // console.log("activeRound is now false");
     countNumber += 1;
     streakCount.innerHTML = countNumber;
     playButton.style.backgroundColor = "black";
@@ -168,7 +163,6 @@ const endGame = (gameStatus) => {
   } else {
     activeRound = false;
     countNumber = 0;
-    // console.log("activeRound is now false");
     playButton.style.backgroundColor = "black";
     playButton.innerHTML = "New Game";
     playButton.style.borderTopWidth = "0px";
