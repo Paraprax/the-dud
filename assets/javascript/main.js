@@ -163,12 +163,16 @@ const endGame = (gameStatus) => {
     streakCount.innerHTML = countNumber;
     playButton.style.backgroundColor = "black";
     playButton.innerHTML = "Next round";
+    playButton.style.borderTopWidth = "0px";
+    playButton.style.borderBottomWidth = "3px";
   } else {
     activeRound = false;
     countNumber = 0;
     // console.log("activeRound is now false");
     playButton.style.backgroundColor = "black";
     playButton.innerHTML = "New Game";
+    playButton.style.borderTopWidth = "0px";
+    playButton.style.borderBottomWidth = "3px";
     statusMessage.innerHTML = "GAME OVER";
     statusMessage.style.color = "rgb(255, 204, 0)";
     document.getElementById("tv-2-background").style.backgroundColor = "red";
@@ -185,6 +189,8 @@ playButton.onclick = () => {
   if (!gameStarted) {
     //unbars doors on first round of refresh only
     playButton.innerHTML = " ";
+    playButton.style.borderTopWidth = "3px";
+    playButton.style.borderBottomWidth = "0px";
     playButton.style.backgroundColor = "rgb(20,20,20)";
     gameStarted = true;
     doorImg1.src = closedDoorPath;
@@ -195,6 +201,8 @@ playButton.onclick = () => {
   }
   if (!activeRound) {
     playButton.innerHTML = " ";
+    playButton.style.borderTopWidth = "3px";
+    playButton.style.borderBottomWidth = "0px";
     playButton.style.backgroundColor = "rgb(20,20,20)";
     streakCount.innerHTML = countNumber;
     startRound();
