@@ -82,7 +82,7 @@ const isOpen = (door) => {
     return false;
   } else {
     //if it's any other image:
-    console.log(door.src);
+    // console.log(door.src);
     // console.log("isOpen returned true");
     return true;
   }
@@ -191,7 +191,7 @@ playButton.onclick = () => {
     playButton.innerHTML = " ";
     playButton.style.borderTopWidth = "3px";
     playButton.style.borderBottomWidth = "0px";
-    playButton.style.backgroundColor = "rgb(20,20,20)";
+    playButton.style.backgroundColor = "rgb(31,31,31)";
     gameStarted = true;
     doorImg1.src = closedDoorPath;
     doorImg2.src = closedDoorPath;
@@ -203,7 +203,7 @@ playButton.onclick = () => {
     playButton.innerHTML = " ";
     playButton.style.borderTopWidth = "3px";
     playButton.style.borderBottomWidth = "0px";
-    playButton.style.backgroundColor = "rgb(20,20,20)";
+    playButton.style.backgroundColor = "rgb(31,31,31)";
     streakCount.innerHTML = countNumber;
     startRound();
   }
