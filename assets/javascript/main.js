@@ -143,6 +143,7 @@ const startRound = () => {
 
 const resetDoors = () => {
   if (gameStarted) {
+    blinkingArrow.style.display = "block";
     doorImg1.src = closedDoorPath;
     doorImg2.src = closedDoorPath;
     doorImg3.src = closedDoorPath;
@@ -169,6 +170,7 @@ const endGame = (gameStatus) => {
     playButton.style.borderTopWidth = "0px";
     playButton.style.borderBottomWidth = "3px";
     statusMessage.innerHTML = "GAME OVER";
+    blinkingArrow.style.display = "none";
     statusMessage.style.color = "rgb(255, 204, 0)";
     document.getElementById("tv-2-background").style.backgroundColor = "red";
   }
