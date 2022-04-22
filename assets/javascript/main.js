@@ -225,3 +225,16 @@ setInterval(() => {
     arrow = true;
   }
 }, speed);
+
+//blinking button text logic
+let buttonText = true;
+var speed = 900;
+setInterval(() => {
+  if (buttonText) {
+    document.getElementById("buttonText").style.opacity = 0;
+    buttonText = false;
+  } else {
+    document.getElementById("buttonText").style.opacity = 1;
+    buttonText = true;
+  }
+}, speed);
