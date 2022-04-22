@@ -70,6 +70,7 @@ header {
 }
 
 #streak-message {
+  display: none;
   font-family: "TickingTimebombBB";
   font-size: 20pt;
   padding: 10px;
@@ -85,6 +86,7 @@ header {
 }
 
 #streak-count {
+  display: none;
   font-family: "TickingTimebombBB";
   font-size: 20pt;
   padding: 10px;
@@ -119,6 +121,7 @@ header {
 }
 
 #status-message {
+  display: none;
   font-family: "TickingTimebombBB";
   font-size: 20pt;
   padding: 10px;
@@ -131,6 +134,23 @@ header {
   z-index: 1;
   -ms-transform: rotate(351deg); /* IE 9 */
   transform: rotate(351deg);
+}
+
+#arrow {
+  display: none;
+  font-family: "TickingTimebombBB";
+  font-size: 20pt;
+  font-weight: bolder;
+  padding: 10px;
+  margin: 40px;
+  width: 70px;
+  position: absolute;
+  text-align: center;
+  top: 160px;
+  right: 170px;
+  z-index: 1;
+  -ms-transform: rotate(315deg); /* IE 9 */
+  transform: rotate(315deg);
 }
 
 #tv-2-background {
@@ -167,20 +187,4 @@ header {
   text-align: center;
   margin-top: 4px;
   cursor: pointer;
-}
-
-#arrow {
-  font-family: "TickingTimebombBB";
-  font-size: 20pt;
-  font-weight: bolder;
-  padding: 10px;
-  margin: 40px;
-  width: 70px;
-  position: absolute;
-  text-align: center;
-  top: 160px;
-  right: 170px;
-  z-index: 1;
-  -ms-transform: rotate(315deg); /* IE 9 */
-  transform: rotate(315deg);
 }
