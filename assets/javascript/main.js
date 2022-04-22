@@ -161,11 +161,13 @@ const endGame = (gameStatus) => {
     // console.log("activeRound is now false");
     countNumber += 1;
     streakCount.innerHTML = countNumber;
+    playButton.style.backgroundColor = "black";
     playButton.innerHTML = "Next round";
   } else {
     activeRound = false;
     countNumber = 0;
     // console.log("activeRound is now false");
+    playButton.style.backgroundColor = "black";
     playButton.innerHTML = "New Game";
     statusMessage.innerHTML = "GAME OVER";
     statusMessage.style.color = "rgb(255, 204, 0)";
@@ -183,6 +185,7 @@ playButton.onclick = () => {
   if (!gameStarted) {
     //unbars doors on first round of refresh only
     playButton.innerHTML = " ";
+    playButton.style.backgroundColor = "rgb(20,20,20)";
     gameStarted = true;
     doorImg1.src = closedDoorPath;
     doorImg2.src = closedDoorPath;
@@ -192,6 +195,7 @@ playButton.onclick = () => {
   }
   if (!activeRound) {
     playButton.innerHTML = " ";
+    playButton.style.backgroundColor = "rgb(20,20,20)";
     streakCount.innerHTML = countNumber;
     startRound();
   }
