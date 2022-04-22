@@ -168,3 +168,19 @@ header {
   margin-top: 4px;
   cursor: pointer;
 }
+
+#arrow {
+  font-family: "TickingTimebombBB";
+  font-size: 20pt;
+  font-weight: bolder;
+  padding: 10px;
+  margin: 40px;
+  width: 70px;
+  position: absolute;
+  text-align: center;
+  top: 160px;
+  right: 170px;
+  z-index: 1;
+  -ms-transform: rotate(315deg); /* IE 9 */
+  transform: rotate(315deg);
+}

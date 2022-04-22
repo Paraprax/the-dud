@@ -207,7 +207,7 @@ startRound();
 
 //blinking arrow logic:
 let arrow = true;
-var speed = 250;
+var speed = 1000;
 setInterval(() => {
   if (arrow) {
     document.getElementById("arrow").style.opacity = 0;
