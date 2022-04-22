@@ -192,6 +192,7 @@ playButton.onclick = () => {
     doorImg5.src = closedDoorPath;
   }
   if (!activeRound) {
+    playButton.innerHTML = " ";
     streakCount.innerHTML = countNumber;
     startRound();
   }
