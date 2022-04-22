@@ -19,6 +19,14 @@ let openDoor4;
 let openDoor5;
 let numOfClosedDoors = 5;
 let activeRound = true;
+//changes only once after pageload:
+let gameStarted = false;
+
+doorImg1.src = barredDoorPath;
+doorImg2.src = barredDoorPath;
+doorImg3.src = barredDoorPath;
+doorImg4.src = barredDoorPath;
+doorImg5.src = barredDoorPath;
 
 const doorRandomizer = () => {
   // console.log(numOfClosedDoors);
@@ -132,14 +140,20 @@ const startRound = () => {
   statusMessage.style.color = "rgb(102, 255, 47)";
   document.getElementById("tv-2-background").style.backgroundColor = "rgb(0, 6, 2)";
   //reset gameplay values:
-  doorImg1.src = barredDoorPath;
-  doorImg2.src = barredDoorPath;
-  doorImg3.src = barredDoorPath;
-  doorImg4.src = barredDoorPath;
-  doorImg5.src = barredDoorPath;
+  resetDoors();
   numOfClosedDoors = 5;
   activeRound = true;
   doorRandomizer();
+};
+
+const resetDoors = () => {
+  if (gameStarted) {
+    doorImg1.src = closedDoorPath;
+    doorImg2.src = closedDoorPath;
+    doorImg3.src = closedDoorPath;
+    doorImg4.src = closedDoorPath;
+    doorImg5.src = closedDoorPath;
+  }
 };
 
 //outcome:
@@ -168,13 +182,15 @@ doorImg3.onclick = door3Click;
 doorImg4.onclick = door4Click;
 doorImg5.onclick = door5Click;
 playButton.onclick = () => {
-  doorImg1.src = closedDoorPath;
-  doorImg2.src = closedDoorPath;
-  doorImg3.src = closedDoorPath;
-  doorImg4.src = closedDoorPath;
-  doorImg5.src = closedDoorPath;
+  if (!gameStarted) {
+    gameStarted = true;
+    doorImg1.src = closedDoorPath;
+    doorImg2.src = closedDoorPath;
+    doorImg3.src = closedDoorPath;
+    doorImg4.src = closedDoorPath;
+    doorImg5.src = closedDoorPath;
+  }
   if (!activeRound) {
-    console.log(`button clicked`);
     streakCount.innerHTML = countNumber;
     startRound();
   }
